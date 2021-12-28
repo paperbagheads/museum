@@ -23,8 +23,15 @@ html, body {
 
 .spacerXL {
     height: 150px;
-    width: 50px;
+    width: 100px;
     display: inline-block;
+}
+
+.begSpace {
+  height: 150px;
+  min-width: 50px;
+  width: calc(0.50 * (100vw - 950px - (2 * 300px * 0.774) - 24px));
+  display: inline-block;
 }
 
 .gallery {
@@ -33,7 +40,7 @@ html, body {
 }
 
 .marker {
-    font-family: "Permanent Marker";
+  font-family: 'Permanent Marker', cursive;
     font-size: 10px;
 }
 
@@ -87,7 +94,7 @@ html, body {
   
 .pholder {
   height: 70%;
-  width: 61.7%;
+  width: 63%;
   top: 15.4%;
   left: 18.9%;
   position: absolute;
