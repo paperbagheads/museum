@@ -3,35 +3,20 @@
     padding: 0;
 }
 
+p {
+  font-size: 10px;
+}
+
+h5 {
+  font-size: 15px
+}
+
 html, body {
   background-color: #DDDED9;
 }
 
 .main {
   background: linear-gradient(#DDDED9, #E7E7E7);
-}
-
-.scrolling-wrapper{
-	overflow-x: auto;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.nomargin {
-    margin: 0px;
-}
-
-.spacerXL {
-    height: 150px;
-    width: 100px;
-    display: inline-block;
-}
-
-.begSpace {
-  height: 150px;
-  min-width: 50px;
-  width: calc(0.50 * (100vw - 950px - (2 * 300px * 0.774) - 24px));
-  display: inline-block;
 }
 
 .gallery {
@@ -41,37 +26,43 @@ html, body {
 
 .marker {
   font-family: 'Permanent Marker', cursive;
-    font-size: 10px;
+}
+
+.bg-1e {
+  background-color: #1e1e1e;
+}
+
+.bg-f5 {
+  background-color: #f5f5f5;
+}
+
+.hex-f5 {
+  color: #f5f5f5;
+}
+
+.customPaddingTop {
+  padding-top: 200px;
 }
 
 .frameborder {
-    padding: 50px;
+    padding: 2vw;
     border-style: solid;
-    border-width: 50px;
+    border-width: 2vw;
     border-top-color: #000;
     border-right-color: #222;
     border-left-color: #222;
     border-bottom-color: #333;
     background-color: #FFF;
-    height: 500px;
-    width: 750px;
-}
-
-.block{
-  display: inline-block;
-  vertical-align: top;
+    width: 100%;
+    aspect-ratio: 750 / 500;
 }
 
 .dcard {
-  width: 120px;
-  font-size: 7px;
+  width: 100px;
   text-align: justify;
   white-space: normal;
-  background-color: #1E1E1E;
-  color: white;
-  padding: 15px;
+  padding: 10px;
   margin: auto;
-  margin: 40px auto;
 }
 
 .heavyshawdow {
@@ -82,13 +73,12 @@ html, body {
   box-shadow: 0px 5px 5px 0 rgba(0,0,0,0.5);
 }
 
-.lightestshadow {
-  box-shadow: 0px 2px 2px 0 rgba(0,0,0,0.25);
-}
-
 .art {
-  height: 300px;
-  width: calc(300px * 0.774);
+  /* height: 400px;
+  width: calc(400px * 0.774); */
+  /* height: calc(100% / 0.774); */
+  aspect-ratio: 0.774 / 1;
+  width: 100%;
   position: relative;
 }
   
@@ -120,16 +110,6 @@ html, body {
   image-rendering: pixelated;
 }
 
-.customPText {
-  position: absolute;
-  width: 120px;
-  white-space: normal;
-  margin: auto;
-  left: 14px;
-  top: 100px;
-  text-align: center;
-}
-
 #painting {
   height: 100%;
   width: 100%;
@@ -158,4 +138,35 @@ html, body {
   grid-template-columns: repeat(11, 1fr);
   height: 100%;
   width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .dcard {
+    width: 75%;
+    padding: 5px;
+  }
+
+  p {
+    font-size: 4px;
+  }
+
+  h6 {
+    font-size: 5px;
+  }
+
+  h5 {
+    font-size: 10px !important;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .customPaddingTop {
+    padding-top: 0px !important;
+  }
+}
+
+@media only screen and (max-height: 1000px) {
+  .customPaddingTop {
+    padding-top: 100px;
+  }
 }

@@ -25,8 +25,8 @@ const shred = new Vue({
 })
   
 function shredImage() { shred.shred(); }
-$.get('https://pbh-members.herokuapp.com/data', data => {
-  if (data.status) {
+$.get('https://api.shoesfuse.com/artwalldata', data => {
+  if (data.success) {
     document.getElementById("pbhartpiece").src = data.data;
   }
 });

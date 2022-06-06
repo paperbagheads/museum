@@ -4,10 +4,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta content="text/html; charset-utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="icon" href="public/favicon.ico" />
+    <link rel="icon" href="public/images/icon.png" type="image/png" sizes="16x16">
 
-    <title>Paper Museum</title>
+    <title>Museum</title>
 
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,103 +24,100 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
 </head>
 
-<body>
-<div class="main">
-    <div style="height: 50px;"></div>
-    <div class="scrolling-wrapper" style="margin:auto;">
-        <div class="begSpace"></div>
-        <div class="block">
-            <div style="height: 250px;"></div>
-            <div class="art heavyshawdow">
-                <div class="pholder">
-                    <p class="marker nomargin customPText">Mint this piece on <a style="text-decoration: none;" href="https://opensea.io/veovinci">Opensea.io/veovinci.</a></p>
-                    <div id="painting">        
-                        <div class="shredded">
-                            <div class="shred punk" style="background-position: 0% 0%;"></div>
-                            <div class="shred punk" style="background-position: 10% 0%;"></div>
-                            <div class="shred punk" style="background-position: 20% 0%;"></div>
-                            <div class="shred punk" style="background-position: 30% 0%;"></div>
-                            <div class="shred punk" style="background-position: 40% 0%;"></div>
-                            <div class="shred punk" style="background-position: 50% 0%;"></div>
-                            <div class="shred punk" style="background-position: 60% 0%;"></div>
-                            <div class="shred punk" style="background-position: 70% 0%;"></div>
-                            <div class="shred punk" style="background-position: 80% 0%;"></div>
-                            <div class="shred punk" style="background-position: 90% 0%;"></div>
-                            <div class="shred punk" style="background-position: 100% 0%;"></div>
+<body class="main">
+<div class="container customPaddingTop">
+    <div class="row">
+        <div class="col-2 d-flex flex-column centerEverything">
+            <div class="w-100">
+                <div class="art heavyshawdow">
+                    <div class="pholder">
+                        <div class="d-flex w-100 h-100 text-center centerEverything" style="position: absolute;">
+                            <p class="marker mb-0">Mint this<br />piece on <br /><a style="text-decoration: none;" href="https://opensea.io/veovinci">Opensea.io<br />/veovinci.</a></p>
                         </div>
-                        <div class="punk" id="original"></div>
+                        <div id="painting">        
+                            <div class="shredded">
+                                <div class="shred punk" style="background-position: 0% 0%;"></div>
+                                <div class="shred punk" style="background-position: 10% 0%;"></div>
+                                <div class="shred punk" style="background-position: 20% 0%;"></div>
+                                <div class="shred punk" style="background-position: 30% 0%;"></div>
+                                <div class="shred punk" style="background-position: 40% 0%;"></div>
+                                <div class="shred punk" style="background-position: 50% 0%;"></div>
+                                <div class="shred punk" style="background-position: 60% 0%;"></div>
+                                <div class="shred punk" style="background-position: 70% 0%;"></div>
+                                <div class="shred punk" style="background-position: 80% 0%;"></div>
+                                <div class="shred punk" style="background-position: 90% 0%;"></div>
+                                <div class="shred punk" style="background-position: 100% 0%;"></div>
+                            </div>
+                            <div class="punk" id="original"></div>
+                        </div>
+                    </div>
+                    <div class="frame"></div>
+                </div>
+                <div class="dcard bg-1e hex-f5 mt-4 lightshadow" style="margin-top: 1.5vw">
+                    <p class="marker mb-0">Crypto Lisa</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-6 d-flex flex-column centerEverything">
+            <div class="w-100">
+                <div class="my-4" style="width: 250px; white-space: normal;">
+                    <h5 class="gallery" style="letter-spacing: 2px;">LA LOURVE MUSEUM</h5>
+                    <p class="gallery" style="font-size: 7px;">Welcome to the VeoVinci Collection. Here you will find artworks created by VeoVinci, such as the "Crypto Lisa" and "Bored Lisa".</p>
+                </div>
+                <div class="frameborder heavyshawdow">
+                    <div style="background-color: #E7E7E7;width: 100%; height: 100%;">
+                        <img id="pbhartpiece" style="image-rendering: pixelated;" height=100% width=100% src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABaCAYAAABaK68tAAAAAXNSR0IArs4c6QAAA49JREFUeF7tnNFt2zAURfm6QP8yR5ENgnaUAF0hI2SFAhklRTYIMkf+ukBZkNGTGJYyZVsXFuSTH5kieSkdHjzJ+bAF/iAgIGCCTCIhEBALCSQEEEuClVDEwgEJAcSSYCUUsXBAQgCxJFgJRSwckBBALAlWQhELByQEEEuClVDEwgEJAcSSYCUUsXBAQgCxJFgJRSwckBBALAlWQhELByQEEEuClVDEwgEJAcSSYCUUsXBAQgCxJFgJRSwckBBALAlWQhELByQEEEuClVDEwgEJAcSSYCUUsXBAQgCxJFgJRSwckBBALAlWQhELByQEEEuClVDEwgEJAcSSYCUUsXBAQmATYr3+fop+d7ff7+2/9nPR/+PeXjvtEILn+f2N+SHkH/Rttf38XL9fYtnfzI9FvoVg8XFazx6CxfeifRPs69+p/edLsHAXp+t7MfsVpvbPYBbtbey3+M3q9SSmHBm6GbFcqObx+SneDkKVR7/XJFp1PoGvRWm1PWJufK+/npfHp43OQvnxMcQs1HDMY95DtJuPX61OYiWh/JhDklwvlvuTWEmo8WLsLSahiovL6x2599Lhm7iYUytWkinRmRErdR2qWEsq1NL5g08f67UqVk8s3+VcsRpipVMuV6pYtVjDzW5iP0vwUnt74UmsVKnGCjS0/byLU1eosp0+u2jDo25JxepVtqUV69O4VsXKsB+mqtKqWJ84UbF62vT7TxHLU2ceka13rF6FOqV/9h3rlEfhSIp3rL40jLhOApt5Jl8n/v3eNWLtd28veme7FCvG6f8+Zmattp+f6/ddafXXO7ZkvWPyLmrESovvVqwkxPhVLcZ4SKQ0Lsnhc/xzfZxjXs4ts+ZyluautMcXiblasUrRzhVr6fxjhb2IESstilhDZVtSserK1Hok1pVxSXulvdxUzG7FOvRO06oc9fjeo7PcxVPeseqKuSkrVriYXYq1AhciziSAWGcCZHqbAGJhhoQAYkmwEopYOCAhgFgSrIQiFg5ICCCWBCuhiIUDEgKIJcFKKGLhgIQAYkmwEopYOCAhgFgSrIQiFg5ICCCWBCuhiIUDEgKIJcFKKGLhgIQAYkmwEopYOCAhgFgSrIQiFg5ICCCWBCuhiIUDEgKIJcFKKGLhgIQAYkmwEopYOCAhgFgSrIQiFg5ICCCWBCuhiIUDEgKIJcFKKGLhgIQAYkmwEopYOCAhgFgSrIT+AzFMYnkk4nRnAAAAAElFTkSuQmCC" />
                     </div>
                 </div>
-                <div class="frame"></div>
-            </div>
-            <div class="dcard lightshadow">
-                <p class="marker nomargin">Crypto Lisa</p>
-                <p class="nomargin">Leonardo Da Punk. 2022. Pixel Paper. 1/100.</p>
-            </div>
-            <div class="dcard lightestshadow" style="padding:5px; width: 93px; height:20px;">
-                <p class="gallery" style="font-size: 7px;">Best viewed on Desktop.</p>
-            </div>
-        </div>
-        <div class="spacerXL"></div>
-        <div class="block">
-            <div style="width: 250px;white-space: normal;">
-                <p class="gallery" style="letter-spacing: 2px;">PAPER MUSEUM</p>
-                <p class="gallery" style="font-size: 7px;">Welcome to the Paper Museum Art Collection. Here you will find crypto artworks, such as the "Crypto Lisa" and "Bored Lisa". You will also find the "Paper Bag Heads Art Piece", a group art project created by Paper Bag Heads NFT holders who have exclusive rights to edit the artwork. From time to time, you will find that "Paper Bag Heads Art Piece" changes, which is what makes this art piece special.</p>
-            </div>
-            <div style="height: 30px;"></div>
-            <div class="frameborder heavyshawdow">
-                <div style="background-color: #E7E7E7;width: 100%; height: 100%;">
-                    <img id="pbhartpiece" style="image-rendering: pixelated;" height=100% width=100% src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAABaCAYAAABaK68tAAAAAXNSR0IArs4c6QAAA49JREFUeF7tnNFt2zAURfm6QP8yR5ENgnaUAF0hI2SFAhklRTYIMkf+ukBZkNGTGJYyZVsXFuSTH5kieSkdHjzJ+bAF/iAgIGCCTCIhEBALCSQEEEuClVDEwgEJAcSSYCUUsXBAQgCxJFgJRSwckBBALAlWQhELByQEEEuClVDEwgEJAcSSYCUUsXBAQgCxJFgJRSwckBBALAlWQhELByQEEEuClVDEwgEJAcSSYCUUsXBAQgCxJFgJRSwckBBALAlWQhELByQEEEuClVDEwgEJAcSSYCUUsXBAQgCxJFgJRSwckBBALAlWQhELByQEEEuClVDEwgEJAcSSYCUUsXBAQmATYr3+fop+d7ff7+2/9nPR/+PeXjvtEILn+f2N+SHkH/Rttf38XL9fYtnfzI9FvoVg8XFazx6CxfeifRPs69+p/edLsHAXp+t7MfsVpvbPYBbtbey3+M3q9SSmHBm6GbFcqObx+SneDkKVR7/XJFp1PoGvRWm1PWJufK+/npfHp43OQvnxMcQs1HDMY95DtJuPX61OYiWh/JhDklwvlvuTWEmo8WLsLSahiovL6x2599Lhm7iYUytWkinRmRErdR2qWEsq1NL5g08f67UqVk8s3+VcsRpipVMuV6pYtVjDzW5iP0vwUnt74UmsVKnGCjS0/byLU1eosp0+u2jDo25JxepVtqUV69O4VsXKsB+mqtKqWJ84UbF62vT7TxHLU2ceka13rF6FOqV/9h3rlEfhSIp3rL40jLhOApt5Jl8n/v3eNWLtd28veme7FCvG6f8+Zmattp+f6/ddafXXO7ZkvWPyLmrESovvVqwkxPhVLcZ4SKQ0Lsnhc/xzfZxjXs4ts+ZyluautMcXiblasUrRzhVr6fxjhb2IESstilhDZVtSserK1Hok1pVxSXulvdxUzG7FOvRO06oc9fjeo7PcxVPeseqKuSkrVriYXYq1AhciziSAWGcCZHqbAGJhhoQAYkmwEopYOCAhgFgSrIQiFg5ICCCWBCuhiIUDEgKIJcFKKGLhgIQAYkmwEopYOCAhgFgSrIQiFg5ICCCWBCuhiIUDEgKIJcFKKGLhgIQAYkmwEopYOCAhgFgSrIQiFg5ICCCWBCuhiIUDEgKIJcFKKGLhgIQAYkmwEopYOCAhgFgSrIQiFg5ICCCWBCuhiIUDEgKIJcFKKGLhgIQAYkmwEopYOCAhgFgSrIT+AzFMYnkk4nRnAAAAAElFTkSuQmCC" />
-                </div>
-            </div>
-            <div class="dcard lightshadow" style="width: 162px;">
-                <p class="marker nomargin">Paper Bag Heads Art Piece</p>
-                <p class="nomargin">Owners of PBH NFT. 2022. Digital Art on the Blockchain. 1/1.</p>
-            </div>
-            <div style="width: 180px;white-space: normal; text-align: right; float: right;">
-                <p class="gallery" style="letter-spacing: 2px;">PAPER PROJECTS</p>
-                <p class="gallery" style="font-size: 7px;">From the creators of Paper Bag Heads Ethereum NFT Project. Looking for something else? Head over to the main page at <code><a href="https://www.paperbagheads.com" style="text-decoration: none;">www.paperbagheads.com</a></code>.</p>
-            </div>
-        </div>
-        <div class="spacerXL"></div>
-        <div class="block">
-            <div style="height: 250px;"></div>
-            <div class="art heavyshawdow">
-                <div class="pholder">
-                    <p class="marker nomargin customPText">Mint this piece on <a style="text-decoration: none;" href="https://opensea.io/veovinci">Opensea.io/veovinci.</a></p>
-                    <div id="painting">      
-                        <div class="shredded">
-                            <div class="shred ape" style="background-position: 0% 0%;"></div>
-                            <div class="shred ape" style="background-position: 10% 0%;"></div>
-                            <div class="shred ape" style="background-position: 20% 0%;"></div>
-                            <div class="shred ape" style="background-position: 30% 0%;"></div>
-                            <div class="shred ape" style="background-position: 40% 0%;"></div>
-                            <div class="shred ape" style="background-position: 50% 0%;"></div>
-                            <div class="shred ape" style="background-position: 60% 0%;"></div>
-                            <div class="shred ape" style="background-position: 70% 0%;"></div>
-                            <div class="shred ape" style="background-position: 80% 0%;"></div>
-                            <div class="shred ape" style="background-position: 90% 0%;"></div>
-                            <div class="shred ape" style="background-position: 100% 0%;"></div>
-                        </div>
-                        <div class="ape" id="original"></div>
+                <div class="d-flex my-4 justify-content-start">
+                    <div class="dcard lightshadow bg-1e hex-f5" type="button" onclick="shredImage()" style="width: 90px;">
+                        <p class="mb-0 text-uppercase" style="font-size: 7px;">Do Not Touch.</p>
                     </div>
+
                 </div>
-                <div class="frame"></div>
-            </div>
-            <div class="dcard lightshadow">
-                <p class="marker nomargin">Bored Lisa</p>
-                <p class="nomargin">Apes Da Vinci. 2022. Banana 🍌 Paper. 1/100.</p>
-            </div>
-            <div class="dcard lightestshadow" style="padding:5px; width: 80px; height:20px;" type="button" onclick="shredImage()">
-                <p class="gallery" style="font-size: 7px;">Please Do Not Touch.</p>
+                <div class="mb-4" style="width: 180px; white-space: normal; text-align: right; float: right;">
+                    <h5 class="gallery mb-1" style="letter-spacing: 2px;">VEOVINCI</h5>
+                    <p class="gallery" style="font-size: 7px;">Looking for something else? Head over to <code><a href="https://www.veovinci.com" style="text-decoration: none;">www.veovinci.com</a></code>.</p>
+                </div>
             </div>
         </div>
-        <div class="begSpace"></div>
+        <div class="col-1"></div>
+        <div class="col-2 d-flex flex-column centerEverything">
+            <div class="w-100">
+                <div class="art heavyshawdow">
+                    <div class="pholder">
+                        <div class="d-flex w-100 h-100 text-center centerEverything" style="position: absolute;">
+                            <p class="marker mb-0">Mint this<br />piece on <br /><a style="text-decoration: none;" href="https://opensea.io/veovinci">Opensea.io<br />/veovinci.</a></p>
+                        </div>
+                        <div id="painting">      
+                            <div class="shredded">
+                                <div class="shred ape" style="background-position: 0% 0%;"></div>
+                                <div class="shred ape" style="background-position: 10% 0%;"></div>
+                                <div class="shred ape" style="background-position: 20% 0%;"></div>
+                                <div class="shred ape" style="background-position: 30% 0%;"></div>
+                                <div class="shred ape" style="background-position: 40% 0%;"></div>
+                                <div class="shred ape" style="background-position: 50% 0%;"></div>
+                                <div class="shred ape" style="background-position: 60% 0%;"></div>
+                                <div class="shred ape" style="background-position: 70% 0%;"></div>
+                                <div class="shred ape" style="background-position: 80% 0%;"></div>
+                                <div class="shred ape" style="background-position: 90% 0%;"></div>
+                                <div class="shred ape" style="background-position: 100% 0%;"></div>
+                            </div>
+                            <div class="ape" id="original"></div>
+                        </div>
+                    </div>
+                    <div class="frame"></div>
+                </div>
+                <div class="dcard bg-1e hex-f5 mt-4 lightshadow" style="margin-top: 1.5vw">
+                    <p class="marker mb-0">Bored Lisa</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div style="height: 50px;"></div>
 </div>
 
 <script src="public/js/script.js"></script>
